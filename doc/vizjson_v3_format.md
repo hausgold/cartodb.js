@@ -6,11 +6,11 @@
   {
      // required
      "version": "3.0.0"
-   
+
     // optional (default: [0, 0])
     // [lat, lon] where map is placed when is loaded. It's ignored if bounds attribute is present.
      "center": [0, 0],
-   
+
     // optional (default: 4)
     "zoom": 4,
 
@@ -32,19 +32,19 @@
 
     // mandatory, "leaflet" or "googlemaps"
     map_provider: "leaflet",
-    
+
     // mandatory
     legends: true,
-    
+
     // mandatory
     scrollwheel: false,
-    
+
     // optional (default: null)
     user : {
       avatar_url: '<avatar url>',
       fullname: '<user fullname>'
     },
-    
+
     // optional (default: false)
     vector: false,
 
@@ -63,7 +63,7 @@
           urlTemplate: "http://{s}.api.cartocdn.com/base-flatblue/{z}/{x}/{y}.png"
          },
        },
-       
+
        // plain color layer
        {
         order: 0,
@@ -84,14 +84,14 @@
          options: {
             attribution: "",
             filter: "mapnik",
-            maps_api_template: "http://{user}.localhost.lan:8181",
-            sql_api_template: "http://{user}.localhost.lan:8080",
+            maps_api_template: "http://{user}.cartodb.localhost:8181",
+            sql_api_template: "http://{user}.cartodb.localhost:8080",
             user_name: "javi",
             layer_definition: see https://github.com/CartoDB/Windshaft/blob/master/doc/Multilayer-API.md
          }
        },
 
-       // named-map 
+       // named-map
        {
          type: 'namedmap',
          order: 1,
@@ -100,8 +100,8 @@
             user_name: "javi",
             attribution: "",
             filter: "mapnik",
-            maps_api_template: "http://{user}.localhost.lan:8181",
-            sql_api_template: "http://{user}.localhost.lan:8080",
+            maps_api_template: "http://{user}.cartodb.localhost:8181",
+            sql_api_template: "http://{user}.cartodb.localhost:8080",
             named_map: {
                 name: 'test',
                 stat_tag: "a5c626a0-a29f-11e4-bee0-010c4c326911",
@@ -121,7 +121,7 @@
             },
          }
        },
-       
+
        // torque
        {
          type: 'torque',
@@ -141,7 +141,7 @@
             table_name: "sensor_log_2013_10_27_12_01",
             user_name: "javi",
             visible: true,
-            
+
             named_map: { //if this key is present named_map is used, if not it means it's an anonymous map
                 name: 'tpl_test',
                 layer_index: 1, // layer_index inside Named Map
@@ -163,14 +163,14 @@
          ... other options
        }
      }],
-     
+
     // mandatory
     datasource: {
-      maps_api_template: "http://{user}.localhost.lan:8181",
+      maps_api_template: "http://{user}.cartodb.localhost:8181",
       stat_tag: "47f329b2-fd5e-11e5-a82a-080027880ca6",
       user_name: "juanignaciosl"
     },
- 
+
      // optional (default: [])
      analyses: [
         {
@@ -189,7 +189,7 @@
           }
         }
      ],
-     
+
      // optional (default: [])
      widgets: [
       {
@@ -207,6 +207,6 @@
         type: "category"
       }
      ]
-   
+
   }
 ```

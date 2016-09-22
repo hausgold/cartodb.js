@@ -55,7 +55,7 @@ describe('api.layers', function() {
         cartodb.createLayer(map, {
           user: 'development',
           table: 'clubbing',
-          host: 'localhost.lan:3000',
+          host: 'cartodb.localhost:3000',
           protocol: 'http'
         });
         expect(cdb.core.Loader.get).toHaveBeenCalled();
